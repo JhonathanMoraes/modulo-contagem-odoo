@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 
-    <menuitem id="menu_contagem_extended_root" parent="stock.menu_stock_root" name="Contagens"/>
+    <menuitem id="menu_contagem_extended_root" parent="stock.menu_stock_root" name="Contagem"/>
 
-    <menuitem id="menu_contagem" name="Contagem" action="contagem_view"
+    <menuitem id="menu_contagem" name="Nova contagem" action="contagem_view"
               parent="menu_contagem_extended_root" sequence="1"/>
 
-    <menuitem id="menu_recontagem" name="Recontagem" action="contagem_view"
+    <menuitem id="menu_recontagem" name="Realizar recontagem" action="recontagem_view"
               parent="menu_contagem_extended_root" sequence="2"/>
 
-    <menuitem id="menu_conferencia" name="Conferência" action="contagem_view"
+    <menuitem id="menu_conferencia" name="Conferência" action="conferencia_view"
               parent="menu_contagem_extended_root" sequence="3"/>
 </odoo>

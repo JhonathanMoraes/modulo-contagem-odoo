@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
+
+
+    <record id="conferencia_view" model="ir.actions.act_window">
+        <field name="name">Conferência</field>
+        <field name="res_model">contagem</field>
+        <field name="view_mode">tree</field>
+    </record>
 </odoo>
