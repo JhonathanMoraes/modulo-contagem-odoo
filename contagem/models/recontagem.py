@@ -1,8 +1,6 @@
 from odoo import _, api, fields, models
 
 class Recontagem(models.Model):
-    _name = "recontagem"
-    _description = "Recontagem dos produtos"
-    _inherit = 'contagem'
+    _description = "Recontagem do estoque"
+    _inherit = 'stock.quant'
 
-    contagem_id = fields.Many2one("contagem", string="Contagem")

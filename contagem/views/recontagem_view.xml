@@ -2,34 +2,22 @@
 <odoo>
     <record id="view_recontagem_form" model="ir.ui.view">
         <field name="name">View recontagem Form</field>
-        <field name="model">recontagem</field>
+        <field name="model">stock.quant</field>
         <field name="arch" type="xml">
             <form>
-                <sheet>
-                    <group string="Recontagem">
-                        <group>]
-                            <field name="company_id" invisible="1" />
-                            <field name="state" />
-                            <field name="user_id" string="User" optional="show" />
-                        </group>
-                        <group>
-                            <field name="product_id" options="{'no_create': True}" />
-                            <field name="location_id" options="{'no_create': True}" />
-                            <label for="inventory_quantity" string="Counted Quantity" />
-                            <div class="o_row">
-                                <field name="inventory_quantity" />
-                                <field name="product_uom_id" groups="uom.group_uom" />
-                            </div>
-                        </group>
-                    </group>
-                </sheet>
+                <group name="recontagem">
+                    <field name="product_id" />
+                    <field name="location_id" />
+                    <field name="inventory_quantity" />
+                    <field name="state" />
+                </group>
             </form>
         </field>
     </record>
 
     <record id="recontagem_view" model="ir.actions.act_window">
         <field name="name">Recontagem</field>
-        <field name="res_model">recontagem</field>
+        <field name="res_model">stock.quant</field>
         <field name="view_mode">form</field>
     </record>
 </odoo>

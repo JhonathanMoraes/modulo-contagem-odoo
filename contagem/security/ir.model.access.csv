@@ -1,3 +1,1 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_contagem_contagem,contagem.contagem,model_contagem,base.group_user,1,1,1,1
-access_contagem_recontagem,contagem.recontagem,model_recontagem,base.group_user,1,1,1,1

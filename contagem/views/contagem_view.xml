@@ -2,40 +2,29 @@
 <odoo>
     <record id="view_contagem_form" model="ir.ui.view">
         <field name="name">View contagem Form</field>
-        <field name="model">contagem</field>
+        <field name="model">stock.quant</field>
+        <field name="inherit_id" ref="stock.view_stock_quant_form_editable"/>
         <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <group string="Nova contagem">
-                        <group>
-                            <field name="tracking" invisible="1" />
-                            <field name="company_id" invisible="1" />
-                            <field name="state" />
-                            <field name="inventory_date" readonly="1" />
-                            <field name="lot_id" groups="stock.group_production_lot"
-                                attrs="{'readonly': [('tracking', 'not in', ['serial', 'lot'])], 'required': [('tracking', '!=', 'none')]}"
-                                context="{'default_product_id': product_id, 'default_company_id': company_id}" invisible="1" />
-                            <field name='company_id' groups="base.group_multi_company" />
-                            <field name="user_id" string="User" />
-                        </group>
-                        <group>
-                            <field name="location_id" readonly="0" options="{'no_create': True}" />
-                            <field name="product_id" readonly="0" options="{'no_create': True}" />
-                            <label for="inventory_quantity" string="Counted Quantity" />
-                            <div class="o_row">
-                                <field name="inventory_quantity" />
-                                <field name="product_uom_id" groups="uom.group_uom" />
-                            </div>
-                        </group>
-                    </group>
-                </sheet>
-            </form>
+            <xpath expr="//sheet/group/group[2]" position="replace">
+                <group>
+                    <field name="tracking" invisible="1"/>
+                    <field name="company_id" invisible="1"/>
+                    <field name="product_id" readonly="0" options="{'no_create': True}"/>
+                    <field name="location_id" readonly="0" options="{'no_create': True}"/>
+                    <field name="lot_id" groups="stock.group_production_lot"
+                           attrs="{'readonly': [('tracking', 'not in', ['serial', 'lot'])], 'required': [('tracking', '!=', 'none')]}"
+                           context="{'default_product_id': product_id, 'default_company_id': company_id}"/>
+                    <field name="package_id" readonly="0" groups="stock.group_tracking_lot"/>
+                    <field name="owner_id" readonly="0" groups="stock.group_tracking_owner" options="{'no_create': True}"/>
+                    <field name='company_id' groups="base.group_multi_company"/>
+                </group>
+            </xpath>
         </field>
     </record>
 
     <record id="contagem_view" model="ir.actions.act_window">
         <field name="name">Contagem</field>
-        <field name="res_model">contagem</field>
+        <field name="res_model">stock.quant</field>
         <field name="view_mode">form</field>
     </record>
 </odoo>

@@ -7,12 +7,12 @@
     'category': 'Uncategorized',
     'version': '0.1',
     'license':'LGPL-3',
-    'depends': ['base', 'stock'],
+    'depends': ['base','stock'],
     'data': [
-        'security/ir.model.access.csv',
+        # 'security/ir.model.access.csv',
         'views/contagem_menu_views.xml',
         'views/contagem_view.xml',
         'views/recontagem_view.xml',
         'views/conferencia_view.xml',
-    ]
+    ],
 }
