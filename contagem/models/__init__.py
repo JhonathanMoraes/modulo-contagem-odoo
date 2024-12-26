@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import conferencia
+from . import conference
 from . import contagem

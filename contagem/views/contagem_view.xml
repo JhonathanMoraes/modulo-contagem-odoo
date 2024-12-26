@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="view_contagem_form" model="ir.ui.view">
-        <field name="name">View contagem Form</field>
+        <field name="name">view.contagem form</field>
         <field name="model">contagem</field>
+        <field name="type">form</field>
         <field name="arch" type="xml">
             <form>
-                <sheet string="Contagem">
-                    <field name="product_id" />
-                    <field name="location_id" />
-                    <field name="counted_quantity" />
+                <sheet>
+                    <group string="Contagem">
+                        <group>
+                            <field name="product_id" />
+                            <field name="location_id" />
+                            <field name="user_id" />
+                        </group>
+                        <group>
+                            <field name="type" />
+                            <field name="counted_quantity" />
+                        </group>
+                    </group>
                 </sheet>
             </form>
         </field>
@@ -16,7 +25,7 @@
 
     <record id="contagem_view" model="ir.actions.act_window">
         <field name="name">Contagem view</field>
-        <field name="res_model">stock.quant</field>
+        <field name="res_model">contagem</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="view_contagem_form" />
     </record>

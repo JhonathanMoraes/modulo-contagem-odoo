@@ -4,7 +4,4 @@
 
     <menuitem id="menu_contagem" name="Nova contagem" action="contagem_view"
               parent="menu_contagem_extended_root" sequence="1"/>
-
-    <menuitem id="menu_recontagem" name="Realizar recontagem" action="recontagem_view"
-              parent="menu_contagem_extended_root" sequence="2"/>
 </odoo>
