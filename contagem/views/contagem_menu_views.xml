@@ -2,6 +2,6 @@
 <odoo>
     <menuitem id="menu_contagem_extended_root" parent="stock.menu_stock_root" name="Contagem"/>
 
-    <menuitem id="menu_contagem" name="Nova contagem" action="contagem_view"
+    <menuitem id="menu_contagem" name="Nova contagem" action="stock_count_view"
               parent="menu_contagem_extended_root" sequence="1"/>
 </odoo>

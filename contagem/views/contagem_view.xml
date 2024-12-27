@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record id="view_contagem_form" model="ir.ui.view">
-        <field name="name">view.contagem form</field>
-        <field name="model">contagem</field>
+    <record id="view_stock_count_form" model="ir.ui.view">
+        <field name="name">view.stock.count form</field>
+        <field name="model">stock.count</field>
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form>
@@ -23,10 +23,10 @@
         </field>
     </record>
 
-    <record id="contagem_view" model="ir.actions.act_window">
+    <record id="stock_count_view" model="ir.actions.act_window">
         <field name="name">Contagem view</field>
-        <field name="res_model">contagem</field>
+        <field name="res_model">stock.count</field>
         <field name="view_mode">form</field>
-        <field name="view_id" ref="view_contagem_form" />
+        <field name="view_id" ref="view_stock_count_form" />
     </record>
 </odoo>
